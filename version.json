@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "releaseDate": "2025-11-01",
+  "build": "1.0.0.0",
+  "preRelease": false,
+  "releaseNotes": "Initial release of ABCSchool - Multi-tenant School Management System",
+  "gitTag": "v1.0.0",
+  "changelog": {
+    "added": [
+      "Initial project setup with Clean Architecture",
+      "Multi-tenant support using Finbuckle.MultiTenant",
+      "ASP.NET Core Identity integration",
+      "Entity Framework Core with SQL Server",
+      "Docker Compose configuration",
+      "OpenAPI/Swagger documentation",
+      "Comprehensive README (English/Portuguese)",
+      "Database migrations and seeding"
+    ],
+    "changed": [],
+    "deprecated": [],
+    "removed": [],
+    "fixed": [],
+    "security": [
+      "Role-based authorization system",
+      "Configurable password policies",
+      "Tenant data isolation"
+    ]
+  },
+  "breaking": false,
+  "framework": ".NET 9.0",
+  "dependencies": {
+    "major": [
+      "Finbuckle.MultiTenant 9.4.0",
+      "Microsoft.EntityFrameworkCore.SqlServer 9.0.9",
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore 9.0.9"
+    ]
+  }
+}

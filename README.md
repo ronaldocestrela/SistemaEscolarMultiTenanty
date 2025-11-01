@@ -1,6 +1,11 @@
 # ABCSchool Project / Projeto ABCSchool
 
-[English](#english) | [Português](#português)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty/releases/tag/v1.0.0)
+[![.NET](https://img.shields.io/badge/.NET-9.0-purple.svg)](https://dotnet.microsoft.com/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Multi-Tenant](https://img.shields.io/badge/Multi--Tenant-Finbuckle-orange.svg)](https://www.finbuckle.com/MultiTenant/)
+
+[English](#english) | [Português](#português) | [Changelog](CHANGELOG.md) | [Releases](https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty/releases)
 
 ---
 
@@ -9,6 +14,10 @@
 ### 📚 Overview
 
 ABCSchool is a multi-tenant school management system built with .NET 9.0 and following Clean Architecture principles. The project provides a robust foundation for managing school-related operations with support for multiple tenants, identity management, and database migrations.
+
+**Current Version**: 1.0.0 (Released: November 1, 2025)
+
+**Repository**: [SistemaEscolarMultiTenanty](https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty)
 
 ### 🏗️ Architecture
 
@@ -159,6 +168,22 @@ The project includes OpenAPI/Swagger documentation available at:
 - **Docker Support**: Easy deployment and scaling
 - **Database Migrations**: Version-controlled schema changes
 
+### 📋 Version Information
+
+- **Current Version**: 1.0.0
+- **Release Date**: November 1, 2025
+- **Framework**: .NET 9.0
+- **License**: MIT
+
+For detailed changes and version history, see the [CHANGELOG.md](CHANGELOG.md).
+
+### 🔗 Links
+
+- **Repository**: [GitHub - SistemaEscolarMultiTenanty](https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty)
+- **Releases**: [GitHub Releases](https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty/releases)
+- **Issues**: [GitHub Issues](https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty/issues)
+- **Changelog**: [CHANGELOG.md](CHANGELOG.md)
+
 ---
 
 ## Português
@@ -166,6 +191,10 @@ The project includes OpenAPI/Swagger documentation available at:
 ### 📚 Visão Geral
 
 ABCSchool é um sistema de gerenciamento escolar multi-tenant construído com .NET 9.0 seguindo os princípios da Arquitetura Limpa. O projeto fornece uma base robusta para gerenciar operações relacionadas à escola com suporte para múltiplos tenants, gerenciamento de identidade e migrações de banco de dados.
+
+**Versão Atual**: 1.0.0 (Lançada em: 1º de Novembro de 2025)
+
+**Repositório**: [SistemaEscolarMultiTenanty](https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty)
 
 ### 🏗️ Arquitetura
 
@@ -315,6 +344,22 @@ O projeto inclui documentação OpenAPI/Swagger disponível em:
 - **Arquitetura Limpa**: Base de código mantível e testável
 - **Suporte Docker**: Deploy e escalonamento fáceis
 - **Migrações de Banco de Dados**: Mudanças de schema controladas por versão
+
+### 📋 Informações da Versão
+
+- **Versão Atual**: 1.0.0
+- **Data de Lançamento**: 1º de Novembro de 2025
+- **Framework**: .NET 9.0
+- **Licença**: MIT
+
+Para mudanças detalhadas e histórico de versões, veja o [CHANGELOG.md](CHANGELOG.md).
+
+### 🔗 Links
+
+- **Repositório**: [GitHub - SistemaEscolarMultiTenanty](https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty)
+- **Releases**: [GitHub Releases](https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty/releases)
+- **Issues**: [GitHub Issues](https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty/issues)
+- **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 
 ---
 

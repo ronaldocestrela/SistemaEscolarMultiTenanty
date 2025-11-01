@@ -1,0 +1,50 @@
+name: Release Automation
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x'
+    
+    - name: Restore dependencies
+      run: dotnet restore ABCSchool.sln
+    
+    - name: Build
+      run: dotnet build ABCSchool.sln --no-restore --configuration Release
+    
+    - name: Test
+      run: dotnet test ABCSchool.sln --no-build --configuration Release --verbosity normal
+    
+    - name: Extract version from tag
+      id: get_version
+      run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+    
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: ABCSchool v${{ steps.get_version.outputs.VERSION }}
+        body_path: RELEASE_NOTES_v${{ steps.get_version.outputs.VERSION }}.md
+        draft: false
+        prerelease: false
+    
+    - name: Publish NuGet Package (if applicable)
+      run: |
+        # Uncomment and configure if you want to publish NuGet packages
+        # dotnet pack --configuration Release --output ./artifacts
+        # dotnet nuget push ./artifacts/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+        echo "Skipping NuGet publish for now"

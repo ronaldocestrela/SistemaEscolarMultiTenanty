@@ -1,0 +1,41 @@
+services:
+  # backend:
+  #   container_name: incubadora-backend
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   restart: always
+  #   environment:
+  #     TZ: America/Sao_Paulo
+  #   # command: sleep infinity
+  #   depends_on:
+  #     - mssql-incubadora
+  #   ports:
+  #     - "5250:8080"
+  #   # volumes:
+  #   #   - .:/app
+  #   networks:
+  #     - result-scores
+  
+  mssql-incubadora:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql-incubadora
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Ma!s4best4doQu&Ch0ra
+      - TZ=America/Sao_Paulo
+    ports:
+      - "3313:1433"
+    networks:
+      - result-scores
+    restart: always
+    volumes:
+      - sqlserver-incubadora:/var/opt/mssql
+
+networks:
+  result-scores:
+    driver: bridge
+
+volumes:
+  sqlserver-incubadora:
+    driver: local
