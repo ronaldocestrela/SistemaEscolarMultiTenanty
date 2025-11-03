@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2025-11-03
+
+### Added
+- **Custom Exception System**: Comprehensive exception handling with proper HTTP status codes
+  - `ConflictException` - For resource conflicts (HTTP 409)
+  - `ForbiddenException` - For access control violations (HTTP 403)
+  - `IdentityException` - For authentication and identity errors (HTTP 500)
+  - `NotFoundException` - For missing resources (HTTP 404)
+  - `UnauthorizedException` - For unauthorized access (HTTP 401)
+- **Response Wrapper System**: Standardized API response format
+  - `IResponseWrapper` - Base interface for consistent responses
+  - `ResponseWrapper` - Implementation for non-generic responses
+  - `ResponseWrapper<T>` - Generic implementation for typed data responses
+  - Support for success/failure states with structured messages
+  - Async factory methods for asynchronous operations
+
+### Removed
+- Removed placeholder `Class1.cs` from Application layer
+
+### Security
+- Enhanced error handling with proper HTTP status codes
+- Structured exception messages that don't expose sensitive information
+- Consistent error response format across the API
+
+### Technical Details
+- All exceptions inherit from `System.Exception` and include HTTP status codes
+- Response wrappers provide both synchronous and asynchronous factory methods
+- Error messages are collected in lists for detailed feedback
+- Type-safe response handling with generic wrapper support
+
 ## [1.0.0] - 2025-11-01
 
 ### Added
@@ -61,4 +91,5 @@ ABCSchool/
 - Role-based access control
 - Tenant data isolation
 
+[1.1.0]: https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty/releases/tag/v1.1.0
 [1.0.0]: https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty/releases/tag/v1.0.0

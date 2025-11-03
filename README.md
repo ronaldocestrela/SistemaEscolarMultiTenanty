@@ -1,6 +1,6 @@
 # ABCSchool Project / Projeto ABCSchool
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty/releases/tag/v1.0.0)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty/releases/tag/v1.1.0)
 [![.NET](https://img.shields.io/badge/.NET-9.0-purple.svg)](https://dotnet.microsoft.com/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Multi-Tenant](https://img.shields.io/badge/Multi--Tenant-Finbuckle-orange.svg)](https://www.finbuckle.com/MultiTenant/)
@@ -15,7 +15,7 @@
 
 ABCSchool is a multi-tenant school management system built with .NET 9.0 and following Clean Architecture principles. The project provides a robust foundation for managing school-related operations with support for multiple tenants, identity management, and database migrations.
 
-**Current Version**: 1.0.0 (Released: November 1, 2025)
+**Current Version**: 1.1.0 (Released: November 3, 2025)
 
 **Repository**: [SistemaEscolarMultiTenanty](https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty)
 
@@ -98,6 +98,16 @@ ABCSchool/
 - **RESTful Endpoints**: Standard HTTP methods and status codes
 - **OpenAPI Documentation**: Interactive API documentation
 - **CORS Support**: Cross-origin resource sharing configuration
+- **Standardized Response Format**: Consistent API responses using ResponseWrapper
+- **Custom Exception Handling**: Comprehensive error handling with proper HTTP status codes
+
+#### Error Handling System
+- **ConflictException**: Resource conflicts (HTTP 409)
+- **ForbiddenException**: Access control violations (HTTP 403)
+- **IdentityException**: Authentication errors (HTTP 500)
+- **NotFoundException**: Missing resources (HTTP 404)
+- **UnauthorizedException**: Unauthorized access (HTTP 401)
+- **Response Wrappers**: Standardized success/failure response format
 
 ### 🚀 Getting Started
 
@@ -170,8 +180,8 @@ The project includes OpenAPI/Swagger documentation available at:
 
 ### 📋 Version Information
 
-- **Current Version**: 1.0.0
-- **Release Date**: November 1, 2025
+- **Current Version**: 1.1.0
+- **Release Date**: November 3, 2025
 - **Framework**: .NET 9.0
 - **License**: MIT
 
@@ -192,7 +202,7 @@ For detailed changes and version history, see the [CHANGELOG.md](CHANGELOG.md).
 
 ABCSchool é um sistema de gerenciamento escolar multi-tenant construído com .NET 9.0 seguindo os princípios da Arquitetura Limpa. O projeto fornece uma base robusta para gerenciar operações relacionadas à escola com suporte para múltiplos tenants, gerenciamento de identidade e migrações de banco de dados.
 
-**Versão Atual**: 1.0.0 (Lançada em: 1º de Novembro de 2025)
+**Versão Atual**: 1.1.0 (Lançada em: 3 de Novembro de 2025)
 
 **Repositório**: [SistemaEscolarMultiTenanty](https://github.com/ronaldocestrela/SistemaEscolarMultiTenanty)
 
@@ -275,6 +285,16 @@ ABCSchool/
 - **Endpoints RESTful**: Métodos HTTP padrão e códigos de status
 - **Documentação OpenAPI**: Documentação interativa da API
 - **Suporte CORS**: Configuração de compartilhamento de recursos entre origens
+- **Formato de Resposta Padronizado**: Respostas consistentes da API usando ResponseWrapper
+- **Tratamento de Exceções Customizado**: Tratamento abrangente de erros com códigos HTTP apropriados
+
+#### Sistema de Tratamento de Erros
+- **ConflictException**: Conflitos de recursos (HTTP 409)
+- **ForbiddenException**: Violações de controle de acesso (HTTP 403)
+- **IdentityException**: Erros de autenticação (HTTP 500)
+- **NotFoundException**: Recursos não encontrados (HTTP 404)
+- **UnauthorizedException**: Acesso não autorizado (HTTP 401)
+- **Response Wrappers**: Formato padronizado de resposta para sucesso/falha
 
 ### 🚀 Primeiros Passos
 
@@ -347,8 +367,8 @@ O projeto inclui documentação OpenAPI/Swagger disponível em:
 
 ### 📋 Informações da Versão
 
-- **Versão Atual**: 1.0.0
-- **Data de Lançamento**: 1º de Novembro de 2025
+- **Versão Atual**: 1.1.0
+- **Data de Lançamento**: 3 de Novembro de 2025
 - **Framework**: .NET 9.0
 - **Licença**: MIT
 
