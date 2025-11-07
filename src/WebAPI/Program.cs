@@ -9,6 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddMInfrastructureServices(builder.Configuration);
+builder.Services.AddJwtAuthentication(builder.Services.GetJwtSettings(builder.Configuration));
 
 var app = builder.Build();
 
