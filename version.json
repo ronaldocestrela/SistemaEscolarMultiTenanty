@@ -1,31 +1,31 @@
 {
-  "version": "1.1.0",
-  "releaseDate": "2025-11-03",
-  "build": "1.1.0.0",
+  "version": "1.1.1",
+  "releaseDate": "2025-11-06",
+  "build": "1.1.1.0",
   "preRelease": false,
-  "releaseNotes": "Enhanced error handling and response management system",
-  "gitTag": "v1.1.0",
+  "releaseNotes": "OpenAPI tenant header and JWT identity/token improvements",
+  "gitTag": "v1.1.1",
   "changelog": {
     "added": [
-      "Custom exception handling system",
-      "Response wrapper for API standardization",
-      "ConflictException for resource conflicts",
-      "ForbiddenException for access control",
-      "IdentityException for authentication errors",
-      "NotFoundException for missing resources",
-      "UnauthorizedException for unauthorized access",
-      "IResponseWrapper interface for consistent responses",
-      "Generic ResponseWrapper<T> for typed responses"
+      "OpenAPI tenant header support (Swagger annotations)",
+      "ClaimPrincipalExtensions helpers",
+      "TokenService for JWT generation and refresh",
+      "JwtSettings configuration model",
+      "Token DTOs: TokenRequest, RefreshTokenRequest, TokenResponse",
+      "Startup and DI wiring for token services"
     ],
-    "changed": [],
+    "changed": [
+      "Updated appsettings.json with JWT placeholders",
+      "Updated Startup and Program to register token services"
+    ],
     "deprecated": [],
     "removed": [
       "Removed placeholder Class1.cs from Application layer"
     ],
     "fixed": [],
     "security": [
-      "Enhanced error handling with proper HTTP status codes",
-      "Structured exception messages for better security"
+      "JWT token handling scaffold added",
+      "OpenAPI annotation for tenant header to avoid misconfigured requests"
     ]
   },
   "breaking": false,

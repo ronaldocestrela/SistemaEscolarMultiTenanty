@@ -35,6 +35,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Error messages are collected in lists for detailed feedback
 - Type-safe response handling with generic wrapper support
 
+## [1.1.1] - 2025-11-06
+
+### Added
+- **OpenAPI Tenant Header**: Swagger/OpenAPI support for the tenant header to document tenant-aware endpoints.
+- **Identity & Token Features**: JWT support and helpers for token generation and claims handling:
+  - `ClaimPrincipalExtensions` - helpers to read claims from ClaimsPrincipal
+  - `TokenService` - token generation and refresh handling
+  - `JwtSettings` - configuration model for JWT options
+  - Token DTOs: `TokenRequest`, `RefreshTokenRequest`, `TokenResponse`
+- **Startup/DI Updates**: Wiring for token services and identity helpers in `StartUp.cs` and `Program.cs`.
+
+### Changed
+- Updated `appsettings.json` with JWT configuration placeholders
+
+### Technical Notes
+- Token service provides standard JWT token generation and refresh token scaffolding
+- OpenAPI annotations added to document required tenant header for protected endpoints
+
+
 ## [1.0.0] - 2025-11-01
 
 ### Added
